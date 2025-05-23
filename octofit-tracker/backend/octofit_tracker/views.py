@@ -6,7 +6,10 @@ from .models import User, Team, Activity, Leaderboard, Workout
 
 @api_view(['GET'])
 def api_root(request, format=None):
-    base_url = 'http://localhost:8000/'
+    # Detecta se está rodando em Codespace ou local
+    codespace_url = 'https://glowing-space-chainsaw-j7vq5r6pqxfpvw6-8000.app.github.dev/'
+    local_url = 'http://localhost:8000/'
+    base_url = codespace_url if 'app.github.dev' in request.get_host() or 'github.dev' in request.get_host() else local_url
     return Response({
         'users': base_url + 'api/users/?format=api',
         'teams': base_url + 'api/teams/?format=api',
