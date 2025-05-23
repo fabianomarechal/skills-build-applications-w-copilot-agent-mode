@@ -26,8 +26,16 @@ SECRET_KEY = "django-insecure-1n@z2db12lw-=&zf5afmlxkd+y!0izr$jbit-&v2mkyy($$bji
 DEBUG = True
 
 
-# Permitir todas as origens para desenvolvimento
-ALLOWED_HOSTS = ['*']
+
+# Permitir todas as origens para desenvolvimento e liberar o sufixo do Codespace
+import os
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME')
+API_CODESPACE_SUFFIX = '-8000.app.github.dev'
+codespace_host = f"{CODESPACE_NAME}{API_CODESPACE_SUFFIX}" if CODESPACE_NAME else None
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+if codespace_host:
+    ALLOWED_HOSTS.append(codespace_host)
+ALLOWED_HOSTS.append('*')  # Para garantir acesso amplo em dev
 
 
 # Application definition
