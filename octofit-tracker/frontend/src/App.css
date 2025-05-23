@@ -1,0 +1,124 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa 0%, #f0f8ff 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Logo OctoFit */
+.octofit-logo {
+  height: 48px;
+  margin-right: 1rem;
+  vertical-align: middle;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(70,130,180,0.15);
+  background: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, #2b2834 0%, #4682b4 100%) !important;
+  box-shadow: 0 4px 8px rgba(70,130,180,0.08);
+}
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+  color: #ffb300 !important;
+}
+
+/* Headings */
+h1, .display-4 {
+  color: #2b2834;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+h2, h3, h4, h5, h6 {
+  color: #4682b4;
+}
+
+/* Links */
+a, .App-link {
+  color: #0f0be4;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover, .App-link:hover {
+  color: #ffb300;
+  text-decoration: underline;
+}
+
+/* Tables */
+table {
+  width: 95%;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(70,130,180,0.10);
+}
+th {
+  background: #4682b4;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+td {
+  color: #2b2834;
+  font-size: 1rem;
+}
+tr:nth-child(even) {
+  background: #e0f7fa;
+}
+tr:hover {
+  background: #b2ebf2;
+}
+
+/* Buttons */
+.btn-primary, .btn-primary:focus {
+  background: linear-gradient(90deg, #4682b4 60%, #00bcd4 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(70,130,180,0.10);
+  transition: background 0.2s;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #00bcd4 0%, #4682b4 100%);
+  color: #ffb300;
+}
+.btn {
+  font-size: 1.1rem;
+  padding: 0.5rem 1.5rem;
+}
+
+/* Card */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(70,130,180,0.10);
+  border: none;
+}
+.card .card-body {
+  background: #f0f8ff;
+}
+
+/* Custom welcome */
+.octofit-welcome {
+  background: #fffbe6;
+  border-left: 6px solid #ffb300;
+  border-radius: 12px;
+  padding: 2rem 2rem 2rem 2.5rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(255,179,0,0.10);
+}
